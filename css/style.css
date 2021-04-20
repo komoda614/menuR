@@ -1,0 +1,225 @@
+@charset "UFT-8";
+
+/* 共通部分 */
+html {
+    font-size: 100%;
+}
+body {
+    font-family: "游ゴシック";
+    line-height: 1.7;
+    text-align: center;
+}
+a {
+    text-decoration: none;
+}
+img {
+    max-width: 100%;
+}
+
+
+/* header */
+header {
+    height: 70px;
+    width: 100%;
+    background-color: #da6a36;
+    position: fixed;
+    top: 0;
+    z-index: 1;
+}
+
+/* ------------------------------------------------------------- */
+/* いい感じに真ん中寄せ */
+.wrapper { 
+    height: 70px;
+    width: 84%;
+    display: flex; 
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1100px;
+    margin: 0 auto;
+    
+}
+header img {
+    padding-top: 4px;
+    width: 210px;
+}
+.main-nav {
+    display: flex;
+    font-size: 1.25rem;
+    text-transform: uppercase;
+    list-style: none;
+}
+.main-nav li {
+    margin-left: 36px;
+}
+.main-nav a {
+    color: white;
+}
+.main-nav a:hover {
+    color: rgb(197, 197, 197);
+}
+
+/* main--------------------------------- */
+main {
+    max-width: 1100px;
+    margin: 0 auto;
+    width: 84%;
+    color: gray;
+}
+h1,h2,h3,h4,h5 {
+    margin-top: 30px;
+    margin-bottom: 50px;
+    padding-top: 70px;
+    color: #da6a36;
+    font-size: 2rem;
+    border-bottom: 2px solid #da6a36;
+}
+
+/* menuRとは------------------------------ */
+.description-text {
+    margin-bottom: 36px;
+}
+
+
+/* モデル一覧---------------------------- */
+.container {
+    margin: 36px 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+}
+.kari {
+    width: 32.6%;
+}
+.space {
+    width: 1%;
+}
+.item {
+    margin: 0 auto 36px auto;
+    padding: 0;
+    border: 2px solid #da6a36;
+    border-radius: 5px;
+    width: 100%;
+    height: auto;
+}
+.item img {
+    padding: 5px 0;
+    width: 100%;
+    height: auto;
+}
+.food-message {
+    background: #da6a36;
+    color: white;
+    height: 90px;
+}
+.hyouji {
+    padding: 5px 0;
+}
+.food-name {
+    font-size: 1.5rem;
+}
+
+/* 料金 
+table {
+    font-size: 1.75rem;
+    margin: 0 auto;
+    table-layout: fixed;
+
+}
+td {
+    white-space: nowrap;
+}
+td span {
+    font-size: 1rem;
+}
+.price-message {
+    margin: 36px auto;
+}
+*/
+
+/* 導入の流れ--------------------------------- */
+.process-figures {
+    margin-bottom: 50px;
+    display: flex;
+    justify-content: center;
+    height: auto;
+    align-items: flex-start;
+}
+.sd {
+    width: 28%;
+}
+.arrow {
+    width: 8%;
+}
+.process-text {
+    margin-bottom: 16px;
+}
+
+/* お問い合わせ----------------------------- */
+.contact {
+    margin: 36px 0;
+}
+
+
+
+footer {
+    background-color: #ccc;
+    color: black;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* media queries---------------------------------------------------- */
+@media (max-width: 600px) {
+    main {
+        padding: 0;
+        width: 264px;
+    }
+
+   /* モデルを縦並び------------------------ */
+    .container {
+        margin: 36px 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    
+    }
+    .kari {
+        width: 100%;
+    }
+
+    /* 導入図を縦並び----------------------- */
+    .process-figures {
+        flex-direction: column;
+        justify-content: center;
+    }
+    .sd {
+        width: 100%;
+    }
+    .arrow {
+        width: 100%;
+    }
+    .right {
+        display: none;
+    }
+    /* ヘッダーのリスト非表示 */
+    nav {
+        display: none;
+    }
+
+}
+
+@media (min-width: 601px) {
+    .hamburger-menu {
+        display: none;
+    }
+    .under {
+        display: none;
+    }
+}
