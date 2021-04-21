@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>menur</title>
+    <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <header>
+        <div class="wrapper">
+            <a href="https://wakuzawa-inc.com/"><img src="../画像/ワクザワ白.png" alt="ワクザワ"></a>
+            <nav>
+                <ul class="main-nav">
+                    <li><a href="../index.html#model">モデル例</a></li>
+                    <li><a href="../index.html#process">導入の流れ</a></li>
+                    <li><a href="../index.html#contact">お問い合わせ</a></li>
+                </ul>
+            </nav>
+            <!-- ハンバーガー ---------------------------------------------->
+            <div class="hamburger-menu">
+                <input type="checkbox" id="menu-btn-check" class="unshown">
+                <label for="menu-btn-check" class="menu-btn"><span></span></label>
+                <label class="unshown" id="nav-close" for="menu-btn-check"></label>
+                
+                <!--ここからメニュー-->
+                <div class="menu-content" id="menu-content">
+                    <ul>
+                        <li>
+                            <a href="../index.html#model">モデル例</a>
+                        </li>
+                        <li>
+                            <a href="../index.html#process">導入の流れ</a>
+                        </li>
+                        <li>
+                            <a href="../index.html#contact">お問い合わせ</a>
+                        </li>
+                    </ul>
+                </div>
+                <script>
+                    $(function() {
+                      $('#menu-content li a').on('click', function(event) {
+                        $('#menu-btn-check').prop('checked', false);
+                      });
+                    });
+                </script>
+                <!--ここまでメニュー-->
+            </div>
+        </div>
+    </header>
+
+    <!-- main --------------------------------------------------------->
+    <main>
+        <!-- bodyタグ内の任意の位置に配置-->
+        <script
+        type="module"
+        src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+        <!-- slick.jsアイテム-->
+        <!-- ios-srcとsrcのパスは要変更-->
+        <model-viewer
+            class="model-viewer"
+            ios-src="model/shortcake.usdz"
+            src="model/shortcake.glb"
+            preload="preload"
+            camera-controls="camera-controls"
+            shadow-intensity="1"
+            ar="ar"
+            ar-modes="webxr scene-viewer quick-look fallback"
+            ar-scale="fixed"
+            alt="A 3D model of notconventional"
+        >
+            <button class="model-viewer-btn" slot="ar-button">
+                クリックしてARを表示
+            </button>
+        </model-viewer>
+    </main>
+
+    <footer>
+        <p><small>&copy;wakuzawa-inc.All Rights Reserved</small></p>
+    </footer>
+</body>
+</html>
