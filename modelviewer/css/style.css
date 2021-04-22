@@ -25,6 +25,7 @@ header {
     position: fixed;
     top: 0;
     left: 0;
+    z-index: 2;
 }
 
 /* --------------------------ハンバーガー----------------------------------- */
@@ -200,10 +201,13 @@ main {
 
 /* widthやheightの値は要カスタマイズ */
 .model-viewer {
-    margin: 70px auto;
+    margin: 0 auto;
     padding: 5px 0;
-    width: auto;
-    height: 70%;
+    position: fixed;
+    top: 70px;
+    left: calc(50vw - 41.5vh + 50px);
+    width: calc((100vh - 120px) * 0.83);
+    height: calc(100vh - 120px);
     background-color: #fff;
 }
   ​
@@ -223,6 +227,11 @@ footer {
     background-color: #ccc;
     color: black;
     height: 50px;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 2;
     display: flex;
     justify-content: center;
     align-items: center;
