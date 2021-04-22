@@ -202,7 +202,7 @@ main {
 /* widthやheightの値は要カスタマイズ */
 .model-viewer {
     margin: 0 auto;
-    padding: 5px 0;
+    padding: 20px 0 0 0;
     position: fixed;
     top: 70px;
     left: 0;
@@ -216,10 +216,16 @@ main {
     right: 16px;
     bottom: 10px;
     height: 26px;
-    font-weight: bold;
-    line-height: 26px;
+    /* font-weight: bold;
+    line-height: 26px; */
     color: white;
-    background-color: #6b6868;
+    background-color: #da6a36;
+    /* ここから独自 */
+    display: inline-block;
+    /* margin: 1rem auto; */
+    padding: 0.5rem;
+    font-size: 1.2rem;
+    border-radius: 2.2rem;
     border: none;
 }
 
