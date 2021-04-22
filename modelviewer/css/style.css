@@ -200,7 +200,8 @@ main {
 
 /* widthやheightの値は要カスタマイズ */
 .model-viewer {
-    margin: 10px auto;
+    margin: 70px auto;
+    padding: 5px 0;
     width: auto;
     height: 70%;
     background-color: #fff;
