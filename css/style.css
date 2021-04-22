@@ -5,7 +5,7 @@ html {
     font-size: 100%;
 }
 body {
-    font-family: "游ゴシック";
+    font-family: sans-serif, "メイリオ", "Meiryo";
     line-height: 1.7;
     text-align: center;
 }
@@ -24,6 +24,7 @@ header {
     background-color: #da6a36;
     position: fixed;
     top: 0;
+    left: 0;
     z-index: 9;
 }
 
@@ -244,12 +245,14 @@ h1,h2,h3,h4,h5 {
 .food-message {
     background: #da6a36;
     color: white;
-    height: 90px;
+    height: auto;
 }
 .hyouji {
     padding: 5px 0;
 }
 .food-name {
+    margin: 0;
+    padding-bottom: 5px;
     font-size: 1.5rem;
 }
 
