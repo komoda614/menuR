@@ -28,7 +28,6 @@ html {
       // position: fixed;
       // top: 0;
       // left: 0;
-      // z-index: 2;
 
       /* いい感じに真ん中寄せ */
       .wrapper {
@@ -78,8 +77,12 @@ html {
 
     main {
       max-width: 1100px;
-      margin: 0 auto;
+      // margin: 0 auto;
       width: 92%;
+      height: calc(100vh - 120px);
+      position: fixed;
+      top: 70px;
+      left: 4%;
       @media (max-width: 600px) {
         padding: 0;
         width: 92%;
@@ -114,7 +117,7 @@ html {
         position: relative;
         .model-viewer-btn {
           position: absolute;
-          left: 0;
+          right: 0;
           top: 0px;
           width: 160px;
           height: 30px;
@@ -151,9 +154,9 @@ html {
       color: black;
       height: 50px;
       width: 100%;
-      // position: fixed;
-      // bottom: 0;
-      // left: 0;
+      position: fixed;
+      bottom: 0;
+      left: 0;
       // z-index: 2;
       display: flex;
       justify-content: center;
@@ -305,18 +308,3 @@ html {
   display: block;
 }
 /* ここまでハンバーガー--------------------------------------------------- */
-
-/* media queries---------------------------------------------------- */
-@media (max-width: 600px) {
-  footer {
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-  }
-} //media
-
-@media (min-width: 601px) {
-  .hamburger-menu {
-    display: none;
-  }
-}
