@@ -32,6 +32,9 @@ html body header {
   height: 70px;
   width: 100%;
   background-color: #da6a36;
+  position: fixed;
+  top: 0;
+  left: 0;
   /* いい感じに真ん中寄せ */
 }
 
