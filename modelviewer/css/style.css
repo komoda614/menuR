@@ -86,8 +86,11 @@ html body header .wrapper nav .main-nav li a:hover {
 
 html body main {
   max-width: 1100px;
-  margin: 0 auto;
   width: 92%;
+  height: calc(100vh - 120px);
+  position: fixed;
+  top: 70px;
+  left: 4%;
   /* widthやheightの値は要カスタマイズ */
 }
 
@@ -125,7 +128,7 @@ html body main .model-viewer {
 
 html body main .model-viewer .model-viewer-btn {
   position: absolute;
-  left: 0;
+  right: 0;
   top: 0px;
   width: 160px;
   height: 30px;
@@ -159,6 +162,9 @@ html body footer {
   color: black;
   height: 50px;
   width: 100%;
+  position: fixed;
+  bottom: 0;
+  left: 0;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -320,17 +326,3 @@ html body footer {
 }
 
 /* ここまでハンバーガー--------------------------------------------------- */
-/* media queries---------------------------------------------------- */
-@media (max-width: 600px) {
-  footer {
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-  }
-}
-
-@media (min-width: 601px) {
-  .hamburger-menu {
-    display: none;
-  }
-}
