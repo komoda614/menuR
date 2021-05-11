@@ -2,260 +2,265 @@
 
 /* 共通部分 */
 html {
-    font-size: 100%;
+  font-size: 100%;
 }
 body {
-    font-family: sans-serif, "メイリオ", "Meiryo";
-    line-height: 1.7;
-    text-align: center;
+  font-family: sans-serif, "メイリオ", "Meiryo";
+  line-height: 1.7;
+  text-align: center;
 }
 a {
-    text-decoration: none;
+  text-decoration: none;
 }
 img {
-    max-width: 100%;
+  max-width: 100%;
 }
-
 
 /* header */
 header {
-    height: 70px;
-    width: 100%;
-    background-color: #da6a36;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 9;
+  height: 70px;
+  width: 100%;
+  background-color: #da6a36;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9;
 }
 
 /* --------------------------ハンバーガー----------------------------------- */
 /* ボタン実装 */
 .menu-btn {
-    position: fixed;
-    top: 0;
-    right: 10px;
-    display: flex;
-    height: 70px;
-    width: 70px;
-    justify-content: center;
-    align-items: center;
-    z-index: 8;
-    background-color: #da6a36;
+  position: fixed;
+  top: 0;
+  right: 10px;
+  display: flex;
+  height: 70px;
+  width: 70px;
+  justify-content: center;
+  align-items: center;
+  z-index: 8;
+  background-color: #da6a36;
 }
 .menu-btn span,
 .menu-btn span:before,
 .menu-btn span:after {
-    content: '';
-    display: block;
-    height: 3px;
-    width: 25px;
-    border-radius: 3px;
-    background-color: #ffffff;
-    position: absolute;
+  content: "";
+  display: block;
+  height: 3px;
+  width: 25px;
+  border-radius: 3px;
+  background-color: #ffffff;
+  position: absolute;
 }
 .menu-btn span:before {
-    bottom: 8px;
+  bottom: 8px;
 }
 .menu-btn span:after {
-    top: 8px;
+  top: 8px;
 }
 
 /* ボタンの×マーク */
 #menu-btn-check:checked ~ .menu-btn span {
-    background-color: rgba(255, 255, 255, 0);/*メニューオープン時は真ん中の線を透明にする*/
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0
+  ); /*メニューオープン時は真ん中の線を透明にする*/
 }
 #menu-btn-check:checked ~ .menu-btn span::before {
-    bottom: 0;
-    transform: rotate(45deg);
+  bottom: 0;
+  transform: rotate(45deg);
 }
 #menu-btn-check:checked ~ .menu-btn span::after {
-    top: 0;
-    transform: rotate(-45deg);
+  top: 0;
+  transform: rotate(-45deg);
 }
 .unshown {
-    display: none; /* チェックボックス隠す */
+  display: none; /* チェックボックス隠す */
 }
 
 /* メニュー装飾 */
 .menu-content ul {
-    padding: 36px 10px 0;
+  padding: 36px 10px 0;
 }
 .menu-content ul li {
-    border-bottom: solid 1px #ffffff;
-    list-style: none;
+  border-bottom: solid 1px #ffffff;
+  list-style: none;
 }
 .menu-content ul li a {
-    display: block;
-    width: 70%;
-    font-size: 15px;
-    box-sizing: border-box;
-    color:#ffffff;
-    text-decoration: none;
-    padding: 9px 15px 10px 0;
-    margin-bottom: 5px;
-    position: relative;
+  display: block;
+  width: 70%;
+  font-size: 15px;
+  box-sizing: border-box;
+  color: #ffffff;
+  text-decoration: none;
+  padding: 9px 15px 10px 0;
+  margin-bottom: 5px;
+  position: relative;
 }
 .menu-content ul li a::before {
-    content: "";
-    width: 7px;
-    height: 7px;
-    border-top: solid 2px #ffffff;
-    border-right: solid 2px #ffffff;
-    transform: rotate(45deg);
-    position: absolute;
-    right: 11px;
-    top: 16px;
+  content: "";
+  width: 7px;
+  height: 7px;
+  border-top: solid 2px #ffffff;
+  border-right: solid 2px #ffffff;
+  transform: rotate(45deg);
+  position: absolute;
+  right: 11px;
+  top: 16px;
 }
 .menu-content {
-    width: 100%;
-    height: 100%;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 7;
-    background-color: #da6a36;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 7;
+  background-color: #da6a36;
 }
 /* メニューをいったん外へ */
 .menu-content {
-    width: 100%;
-    height: 100%;
-    position: fixed;
-    top: 70px;
-    left: 100%;/*leftの値を変更してメニューを画面外へ*/
-    z-index: 7;
-    background-color: #da6a36;
-    transition: all 0.2s;/*アニメーション設定*/
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 70px;
+  left: 100%; /*leftの値を変更してメニューを画面外へ*/
+  z-index: 7;
+  background-color: #da6a36;
+  transition: all 0.2s; /*アニメーション設定*/
 }
 #menu-btn-check:checked ~ .menu-content {
-    top: 70px;
-    left: 30%;/*ボタンタップでメニューを画面内へ*/
+  top: 70px;
+  left: 30%; /*ボタンタップでメニューを画面内へ*/
 }
 /*閉じる用の薄黒箇所*/
 #nav-close {
-    position: fixed;
-    z-index: 11;
-    top: 0;
-    right: 0;
-    width: 100%;
-    height: 100%;
-    background: black;
-    opacity: 0.5;
-  }
-  /* 黒いとこいったん外へ */
-#nav-close {
-    position: fixed;
-    z-index: 11;
-    top: 70px;
-    right: 100%;/*rightの値を変更してメニューを画面外へ*/
-    width: 100%;
-    height: 100%;
-    background: black;
-    opacity: 0.5;
-    transition: all 0.2s;/*アニメーション設定*/
+  position: fixed;
+  z-index: 11;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background: black;
+  opacity: 0.5;
 }
-  /*チェックがついたら表示させる*/
+/* 黒いとこいったん外へ */
+#nav-close {
+  position: fixed;
+  z-index: 11;
+  top: 70px;
+  right: 100%; /*rightの値を変更してメニューを画面外へ*/
+  width: 100%;
+  height: 100%;
+  background: black;
+  opacity: 0.5;
+  transition: all 0.2s; /*アニメーション設定*/
+}
+/*チェックがついたら表示させる*/
 #menu-btn-check:checked ~ #nav-close {
-    top: 70px;
-    right: 70%;/*ボタンタップでメニューを画面内へ*/
-    display: block;
+  top: 70px;
+  right: 70%; /*ボタンタップでメニューを画面内へ*/
+  display: block;
 }
 /* ここまでハンバーガー--------------------------------------------------- */
 
 /* いい感じに真ん中寄せ */
-.wrapper { 
-    height: 70px;
-    width: 92%;
-    display: flex; 
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1100px;
-    margin: 0 auto;
-    
+.wrapper {
+  height: 70px;
+  width: 92%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1100px;
+  margin: 0 auto;
 }
 header img {
-    padding-top: 8px;
-    width: 210px;
+  padding-top: 8px;
+  width: 210px;
 }
 .main-nav {
-    margin: 0 0 0 auto;
-    display: flex;
-    font-size: 1.25rem;
-    text-transform: uppercase;
-    list-style: none;
+  margin: 0 0 0 auto;
+  display: flex;
+  font-size: 1.25rem;
+  text-transform: uppercase;
+  list-style: none;
 }
 .main-nav li {
-    margin-right: 20px;
+  margin-right: 20px;
 }
 .main-nav a {
-    display: block;
-    color: white;
+  display: block;
+  color: white;
 }
 .main-nav a:hover {
-    color: rgb(197, 197, 197);
+  color: rgb(197, 197, 197);
 }
 
 /* main--------------------------------- */
 main {
-    max-width: 1100px;
-    margin: 0 auto;
-    width: 92%;
-    color: gray;
+  max-width: 1100px;
+  margin: 0 auto;
+  width: 92%;
+  color: gray;
 }
-h1,h2,h3,h4,h5 {
-    margin-top: 30px;
-    margin-bottom: 50px;
-    padding-top: 70px;
-    color: #da6a36;
-    font-size: 2rem;
-    border-bottom: 2px solid #da6a36;
+h1,
+h2,
+h3,
+h4,
+h5 {
+  margin-top: 30px;
+  margin-bottom: 50px;
+  padding-top: 70px;
+  color: #da6a36;
+  font-size: 2rem;
+  border-bottom: 2px solid #da6a36;
 }
 
 /* menuRとは------------------------------ */
 .description-text {
-    margin-bottom: 36px;
+  margin-bottom: 36px;
 }
-
 
 /* モデル一覧---------------------------- */
 .container {
-    margin: 36px 0;
-    padding: 0;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-
+  margin: 36px 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 .kari {
-    width: 32.6%;
+  width: 32.6%;
 }
 .space {
-    width: 1%;
+  width: 1%;
 }
 .item {
-    margin: 0 auto 36px auto;
-    padding: 0;
-    border: 2px solid #da6a36;
-    border-radius: 5px;
-    width: 100%;
-    height: auto;
+  margin: 0 auto 36px auto;
+  padding: 0;
+  border: 2px solid #da6a36;
+  border-radius: 5px;
+  width: 100%;
+  height: auto;
 }
 .item img {
-    padding: 5px 0;
-    width: 100%;
-    height: auto;
+  padding: 5px 0;
+  width: 100%;
+  height: auto;
 }
 .food-message {
-    background: #da6a36;
-    color: white;
-    height: auto;
+  background: #da6a36;
+  color: white;
+  height: auto;
 }
 .hyouji {
-    padding: 5px 0;
+  padding: 5px 0;
 }
 .food-name {
-    margin: 0;
-    padding-bottom: 5px;
-    font-size: 1.5rem;
+  margin: 0;
+  padding-bottom: 5px;
+  font-size: 1.5rem;
 }
 
 /* 料金 
@@ -278,101 +283,97 @@ td span {
 
 /* 導入の流れ--------------------------------- */
 .process-figures {
-    margin-bottom: 50px;
-    display: flex;
-    justify-content: center;
-    height: auto;
-    align-items: flex-start;
+  margin-bottom: 50px;
+  display: flex;
+  justify-content: center;
+  height: auto;
+  align-items: flex-start;
 }
 .sd {
-    width: 28%;
+  width: 28%;
 }
 .arrow {
-    width: 8%;
+  width: 8%;
 }
 .process-text {
-    margin-bottom: 16px;
+  margin-bottom: 16px;
 }
 
 /* お問い合わせ----------------------------- */
 .contact {
-    margin: 36px 0;
+  margin: 36px 0;
 }
 .contact-btn {
-    display: inline-block;
-    margin: 1rem auto;
-    padding: 0.5rem;
-    font-size: 1.2rem;
-    background: #da6a36;
-    color: #ffffff;
-    border-radius: 2.2rem;
+  display: inline-block;
+  margin: 1rem auto;
+  padding: 0.5rem;
+  font-size: 1.2rem;
+  background: #da6a36;
+  color: #ffffff;
+  border-radius: 2.2rem;
 }
 .contact-btn:hover {
-    background: #ec804e;
+  background: #ec804e;
 }
 .contact-btn:active {
-    position: relative;
-    top: 4px;
-    box-shadow: none;
+  position: relative;
+  top: 4px;
+  box-shadow: none;
 }
-
 
 footer {
-    background-color: #ccc;
-    color: black;
-    height: 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  background-color: #ccc;
+  color: black;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-
 
 /* media queries---------------------------------------------------- */
 @media (max-width: 600px) {
-    main {
-        padding: 0;
-        width: 92%;
-    }
+  main {
+    padding: 0;
+    width: 92%;
+  }
 
-   /* モデルを縦並び------------------------ */
-    .container {
-        margin: 36px 0;
-        padding: 0;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-    
-    }
-    .kari {
-        width: 100%;
-    }
+  /* モデルを縦並び------------------------ */
+  .container {
+    margin: 36px 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .kari {
+    width: 100%;
+  }
 
-    /* 導入図を縦並び----------------------- */
-    .process-figures {
-        flex-direction: column;
-        justify-content: center;
-    }
-    .sd {
-        width: 100%;
-    }
-    .arrow {
-        width: 100%;
-    }
-    .right {
-        display: none;
-    }
-    /* ヘッダーのリスト非表示 */
-    nav {
-        display: none;
-    }
-
+  /* 導入図を縦並び----------------------- */
+  .process-figures {
+    flex-direction: column;
+    justify-content: center;
+  }
+  .sd {
+    width: 100%;
+  }
+  .arrow {
+    width: 100%;
+  }
+  .right {
+    display: none;
+  }
+  /* ヘッダーのリスト非表示 */
+  nav {
+    display: none;
+  }
 }
 
 @media (min-width: 601px) {
-    .hamburger-menu {
-        display: none;
-    }
-    .under {
-        display: none;
-    }
+  .hamburger-menu {
+    display: none;
+  }
+  .under {
+    display: none;
+  }
 }
