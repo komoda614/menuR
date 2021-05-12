@@ -246,9 +246,13 @@ h5 {
   height: 30vw;
 }
 .item button {
+  display: none;
+}
+/* .item button {
   width: calc(28vw - 2.5px);
   height: 10vw;
   color: white;
+  background: #da6a36;
   border-radius: 0 0 5px 5px;
 }
 button .btn-induction {
@@ -263,6 +267,15 @@ button .food-name {
   background: #da6a36;
   border-radius: 0 0 5px 5px;
   font-size: 3.5vw;
+} */
+.food-name-pc {
+  width: calc(28vw - 2.5px);
+  height: 10vw;
+  color: white;
+  background: #da6a36;
+  border-radius: 0 0 5px 5px;
+  font-size: 3.5vw;
+  line-height: 10vw;
 }
 
 /* 料金 
@@ -295,7 +308,10 @@ td span {
   width: 25.7vw;
 }
 .process-top {
-  font-size: 2rem;
+  font-size: 2.5vw;
+}
+.process-sentence {
+  font-size: 1.2vw;
 }
 .arrow {
   width: 7.4vw;
@@ -374,9 +390,11 @@ footer {
     height: 92vw;
   }
   .item button {
+    display: block;
     width: calc(92vw - 2.5px);
     height: 28vw;
     color: white;
+    background: #da6a36;
     border-radius: 0 0 5px 5px;
   }
   button .btn-induction {
@@ -391,6 +409,10 @@ footer {
     background: #da6a36;
     border-radius: 0 0 5px 5px;
     font-size: 10vw;
+  }
+
+  .food-name-pc {
+    display: none;
   }
 
   /* 導入図を縦並び----------------------- */
@@ -454,7 +476,55 @@ footer {
     display: none;
   }
 }
+@media screen and (min-width: 601px) and (max-width: 1024px) {
+  /* モデル一覧---------------------------- */
+  .container {
+    margin: 36px 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .item {
+    margin-bottom: 5vw;
+    padding: 0;
+    border: 2px solid #da6a36;
+    border-radius: 5px;
+    width: 28vw;
+    height: 40vw;
+  }
+  .item model-viewer {
+    padding: 5px;
+    width: 28vw;
+    height: 30vw;
+  }
 
+  .item button {
+    display: block;
+    width: calc(28vw - 2.5px);
+    height: 10vw;
+    color: white;
+    background: #da6a36;
+    border-radius: 0 0 5px 5px;
+  }
+  button .btn-induction {
+    width: calc(28vw - 2.5px);
+    height: 3vw;
+    background: #da6a36;
+    font-size: 2.5vw;
+  }
+  button .food-name {
+    width: calc(28vw - 2.5px);
+    height: 7vw;
+    background: #da6a36;
+    border-radius: 0 0 5px 5px;
+    font-size: 3.5vw;
+  }
+
+  .food-name-pc {
+    display: none;
+  }
+}
 @media (min-width: 601px) {
   .hamburger-menu {
     display: none;
